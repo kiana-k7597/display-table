@@ -12,11 +12,9 @@ const Table = ({ columns, data }: TableProps) => {
     return (
         <StyledTable>
             <StyledThead>
-                <tr>
-                    {columns.map(column => (
-                        <StyledTh key={column.dataIndex}>{column.title}</StyledTh>
-                    ))}
-                </tr>
+                {columns.map(column => (
+                    <StyledTh key={column.dataIndex}>{column.title}</StyledTh>
+                ))}
             </StyledThead>
             <tbody>
                 {data.map((row, index) => (
